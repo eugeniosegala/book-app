@@ -12,4 +12,10 @@ colour is `#1D7874`<br>
 **Optional**:<br>
 
 ✅ Add a search field to the app that upon request populates the `filters` post param as follows:
-filters:[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]
+filters:[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]<br>
+
+**Best Effort**:<br>
+
+✅ Classic version (without state management) and Redux + Redux Saga version.<br>
+✅ Adding ES Lint with Airbnb code style.<br>
+✅ Test a component.<br>
