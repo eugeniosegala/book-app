@@ -60,25 +60,12 @@ class Pagination extends Component {
       const hasRightSpill = (totalPages - endPage) > 1;
       const spillOffset = totalNumbers - (pages.length + 1);
 
-      switch (true) {
-        // handle: (1) < {5 6} [7] {8 9} (10)
-        case (hasLeftSpill && !hasRightSpill): {
-          pages = [LEFT_PAGE, ...this.range(startPage - spillOffset, startPage - 1), ...pages];
-          break;
-        }
-
-        // handle: (1) {2 3} [4] {5 6} > (10)
-        case (!hasLeftSpill && hasRightSpill): {
-          pages = [...pages, ...this.range(endPage + 1, endPage + spillOffset), RIGHT_PAGE];
-          break;
-        }
-
-        // handle: (1) < {4 5} [6] {7 8} > (10)
-        case (hasLeftSpill && hasRightSpill):
-        default: {
-          pages = [LEFT_PAGE, ...pages, RIGHT_PAGE];
-          break;
-        }
+      if (hasLeftSpill && !hasRightSpill) {
+        pages = [LEFT_PAGE, ...this.range(startPage - spillOffset, startPage - 1), ...pages];
+      } else if (!hasLeftSpill && hasRightSpill) {
+        pages = [...pages, ...this.range(endPage + 1, endPage + spillOffset), RIGHT_PAGE];
+      } else {
+        pages = [LEFT_PAGE, ...pages, RIGHT_PAGE];
       }
 
       return [1, ...pages, totalPages];
