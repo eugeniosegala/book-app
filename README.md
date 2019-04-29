@@ -1,6 +1,7 @@
-# book-app
+# Books App Exercise
 
 **Requirements:**<br>
+
 ✅ 1. Using React, build a webapp that queries this paginated endpoint and prints out the results as a list<br><br>
 ✅ 2. The app should be paginated (page selector) with the pagination reflected in the url (so when the page is
 refreshed the same resultset is shown)<br><br>
@@ -19,3 +20,5 @@ filters:[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]<br><br>
 ✅ Classic version (without state management) and Redux + Redux Saga version.<br><br>
 ✅ Adding ES Lint with Airbnb code style.<br><br>
 ✅ Test a component.<br><br>
+✅ History routing.<br><br>
+✅ Some UI trick.<br><br>
