@@ -12,9 +12,10 @@ class Pagination extends Component {
       location,
       currentPage,
       callBooks,
+      search,
     } = this.props;
     if (history.action === 'POP' && prevProps.location.pathname !== location.pathname) {
-      callBooks(currentPage);
+      callBooks(currentPage, search);
     }
   }
 
@@ -78,6 +79,7 @@ class Pagination extends Component {
     const {
       callBooks,
       currentPage,
+      search,
     } = this.props;
 
     const pages = this.fetchPageNumbers();
@@ -92,7 +94,7 @@ class Pagination extends Component {
                   to={`/page/${currentPage - 1}`}
                   className="page-link"
                   aria-label="Previous"
-                  onClick={() => callBooks(currentPage - 1)}
+                  onClick={() => callBooks((currentPage - 1), search)}
                 >
                   <span aria-hidden="true">&laquo;</span>
                   <span className="sr-only">Previous</span>
@@ -105,7 +107,7 @@ class Pagination extends Component {
                   to={`/page/${currentPage + 1}`}
                   className="page-link"
                   aria-label="Next"
-                  onClick={() => callBooks(currentPage + 1)}
+                  onClick={() => callBooks((currentPage + 1), search)}
                 >
                   <span aria-hidden="true">&raquo;</span>
                   <span className="sr-only">Next</span>
@@ -117,7 +119,7 @@ class Pagination extends Component {
               <li key={index} className={`page-item${ currentPage === page ? ' active' : ''}`}>
                 <Link
                   className="page-link"
-                  onClick={() => callBooks(page)}
+                  onClick={() => callBooks(page, search)}
                   to={page === 1 ? '/' : `/page/${page}`}
                 >
                   {page}
@@ -138,6 +140,7 @@ Pagination.propTypes = {
   currentPage: PropTypes.any,
   history: PropTypes.any,
   location: PropTypes.any,
+  search: PropTypes.string,
 };
 
 export default Pagination;

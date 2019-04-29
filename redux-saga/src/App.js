@@ -43,6 +43,7 @@ const App = (props) => {
                 <Pagination
                   totalRecords={books.data.count}
                   pageLimit={books.itemsPerPage}
+                  search={books.search}
                   callBooks={callApi}
                   currentPage={Number(routeProps.match.params.id) || 1}
                   history={history}
