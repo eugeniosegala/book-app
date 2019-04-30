@@ -23,3 +23,7 @@ filters:[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]<br><br>
 ✅ History routing (back button chrome).<br><br>
 ✅ Some UI trick.<br><br>
 ✅ Mobile first.<br><br>
+
+
+**Lighthouse performance**:<br>
+![Lighthouse Performance](https://i.ibb.co/3mr61FZ/Screenshot-2019-04-30-12-03-22.png)
