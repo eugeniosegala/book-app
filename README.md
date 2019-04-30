@@ -1,2 +1,2 @@
 # book-app
-Just a Book App developed with React (under development)
+Just a Book App developed with React
