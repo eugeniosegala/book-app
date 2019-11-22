@@ -13,7 +13,7 @@ colour is `#1D7874`<br><br>
 **Optional**:<br>
 
 ✅ Add a search field to the app that upon request populates the `filters` post param as follows:
-filters:[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]<br><br>
+filters: `[{type: "all", values: ["YOUR_SEARCH_FIELD_CONTENTS"]}]` <br><br>
 
 **Best Effort**:<br>
 
